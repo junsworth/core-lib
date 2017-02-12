@@ -9,11 +9,11 @@
 import Foundation
 import Alamofire
 
-class AlamoreServices {
+public class AlamoreServices {
     
-    static let sharedInstance = AlamoreServices()
+    public static let sharedInstance = AlamoreServices()
     
-    func getURLRequest(url:String) -> String {
+    public func getURLRequest(url:String) -> String {
         
         var result:String = ""
         
