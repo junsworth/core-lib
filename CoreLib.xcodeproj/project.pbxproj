@@ -10,10 +10,10 @@
 		632EE0B41E50880D00710EDF /* CoreLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632EE0AA1E50880D00710EDF /* CoreLib.framework */; };
 		632EE0B91E50880D00710EDF /* CoreLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632EE0B81E50880D00710EDF /* CoreLibTests.swift */; };
 		632EE0BB1E50880D00710EDF /* CoreLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 632EE0AD1E50880D00710EDF /* CoreLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		632EE1481E50896A00710EDF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632EE1471E50896A00710EDF /* User.swift */; };
 		632EE1501E50A98300710EDF /* CoreLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632EE14F1E50A98300710EDF /* CoreLib.swift */; };
 		632EE15C1E50AC3000710EDF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632EE15B1E50AC3000710EDF /* Alamofire.framework */; };
 		632EE15E1E50AC5500710EDF /* Alamofire.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 632EE15D1E50AC5500710EDF /* Alamofire.framework.dSYM */; };
+		632EE1881E50E88800710EDF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632EE1871E50E88800710EDF /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,10 +46,10 @@
 		632EE0B31E50880D00710EDF /* CoreLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		632EE0B81E50880D00710EDF /* CoreLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLibTests.swift; sourceTree = "<group>"; };
 		632EE0BA1E50880D00710EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		632EE1471E50896A00710EDF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		632EE14F1E50A98300710EDF /* CoreLib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreLib.swift; sourceTree = "<group>"; };
 		632EE15B1E50AC3000710EDF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		632EE15D1E50AC5500710EDF /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = "<group>"; };
+		632EE1871E50E88800710EDF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				632EE14E1E50A8C500710EDF /* src */,
-				632EE1461E50895900710EDF /* Models */,
 				632EE0AD1E50880D00710EDF /* CoreLib.h */,
 				632EE0AE1E50880D00710EDF /* Info.plist */,
 				632EE14F1E50A98300710EDF /* CoreLib.swift */,
@@ -113,17 +112,10 @@
 			path = CoreLibTests;
 			sourceTree = "<group>";
 		};
-		632EE1461E50895900710EDF /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				632EE1471E50896A00710EDF /* User.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		632EE14E1E50A8C500710EDF /* src */ = {
 			isa = PBXGroup;
 			children = (
+				632EE1861E50E88800710EDF /* Models */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -134,6 +126,14 @@
 				632EE15B1E50AC3000710EDF /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		632EE1861E50E88800710EDF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				632EE1871E50E88800710EDF /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				632EE1881E50E88800710EDF /* User.swift in Sources */,
 				632EE1501E50A98300710EDF /* CoreLib.swift in Sources */,
-				632EE1481E50896A00710EDF /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

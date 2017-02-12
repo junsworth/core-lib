@@ -9,6 +9,7 @@
 import Foundation
 
 class User {
+    
     // MARK properties
     var firstName: String
     var lastName: String
