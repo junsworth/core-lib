@@ -11,6 +11,9 @@
 		632EE0B91E50880D00710EDF /* CoreLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632EE0B81E50880D00710EDF /* CoreLibTests.swift */; };
 		632EE0BB1E50880D00710EDF /* CoreLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 632EE0AD1E50880D00710EDF /* CoreLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		632EE1481E50896A00710EDF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632EE1471E50896A00710EDF /* User.swift */; };
+		632EE1501E50A98300710EDF /* CoreLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632EE14F1E50A98300710EDF /* CoreLib.swift */; };
+		632EE15C1E50AC3000710EDF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632EE15B1E50AC3000710EDF /* Alamofire.framework */; };
+		632EE15E1E50AC5500710EDF /* Alamofire.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 632EE15D1E50AC5500710EDF /* Alamofire.framework.dSYM */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +26,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		632EE1511E50AA8000710EDF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				632EE15E1E50AC5500710EDF /* Alamofire.framework.dSYM in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		632EE0AA1E50880D00710EDF /* CoreLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		632EE0AD1E50880D00710EDF /* CoreLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
@@ -31,6 +47,9 @@
 		632EE0B81E50880D00710EDF /* CoreLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLibTests.swift; sourceTree = "<group>"; };
 		632EE0BA1E50880D00710EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		632EE1471E50896A00710EDF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		632EE14F1E50A98300710EDF /* CoreLib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreLib.swift; sourceTree = "<group>"; };
+		632EE15B1E50AC3000710EDF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		632EE15D1E50AC5500710EDF /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				632EE15C1E50AC3000710EDF /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +75,8 @@
 		632EE0A01E50880D00710EDF = {
 			isa = PBXGroup;
 			children = (
+				632EE15D1E50AC5500710EDF /* Alamofire.framework.dSYM */,
+				632EE15A1E50AC0B00710EDF /* Frameworks */,
 				632EE0AC1E50880D00710EDF /* CoreLib */,
 				632EE0B71E50880D00710EDF /* CoreLibTests */,
 				632EE0AB1E50880D00710EDF /* Products */,
@@ -73,9 +95,11 @@
 		632EE0AC1E50880D00710EDF /* CoreLib */ = {
 			isa = PBXGroup;
 			children = (
+				632EE14E1E50A8C500710EDF /* src */,
 				632EE1461E50895900710EDF /* Models */,
 				632EE0AD1E50880D00710EDF /* CoreLib.h */,
 				632EE0AE1E50880D00710EDF /* Info.plist */,
+				632EE14F1E50A98300710EDF /* CoreLib.swift */,
 			);
 			path = CoreLib;
 			sourceTree = "<group>";
@@ -95,6 +119,21 @@
 				632EE1471E50896A00710EDF /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		632EE14E1E50A8C500710EDF /* src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		632EE15A1E50AC0B00710EDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				632EE15B1E50AC3000710EDF /* Alamofire.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +158,8 @@
 				632EE0A61E50880D00710EDF /* Frameworks */,
 				632EE0A71E50880D00710EDF /* Headers */,
 				632EE0A81E50880D00710EDF /* Resources */,
+				632EE14C1E50A86300710EDF /* ShellScript */,
+				632EE1511E50AA8000710EDF /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -203,11 +244,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		632EE14C1E50A86300710EDF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		632EE0A51E50880D00710EDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				632EE1501E50A98300710EDF /* CoreLib.swift in Sources */,
 				632EE1481E50896A00710EDF /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +397,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CoreLib/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -359,6 +421,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CoreLib/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -412,6 +478,7 @@
 				632EE0C01E50880D00710EDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		632EE0C11E50880D00710EDF /* Build configuration list for PBXNativeTarget "CoreLibTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +487,7 @@
 				632EE0C31E50880D00710EDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
