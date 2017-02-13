@@ -33,4 +33,15 @@ class CoreLibTests: XCTestCase {
         }
     }
     
+    // Confirm the User initializer works
+    func testUserInitializerSucceeds(){
+        
+        let namedUser = User.init(firstName: "Jonathan", lastName: "Unsworth", photo: nil)
+        XCTAssertNotNil(namedUser)
+        
+        let unNamedUser = User.init(firstName: "", lastName: "Unsworth", photo: nil)
+        XCTAssertNil(unNamedUser)
+        
+    }
+    
 }

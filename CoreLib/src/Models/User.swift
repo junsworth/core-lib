@@ -15,17 +15,17 @@ class User {
     var lastName: String
     var photo: UIImage?
     
-    
     // MARK: Initialization
     init?(firstName: String, lastName: String, photo: UIImage?) {
-        // Initialize stored properties.
-        self.firstName = firstName
-        self.lastName = lastName
-        self.photo = photo
         
         // Initialization should fail if there is no name or if the rating is negative.
         if firstName.isEmpty || lastName.isEmpty  {
             return nil
         }
+        
+        // Initialize stored properties.
+        self.firstName = firstName
+        self.lastName = lastName
+        self.photo = photo
     }
 }
