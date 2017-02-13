@@ -11,10 +11,10 @@
 		632EE0B91E50880D00710EDF /* CoreLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632EE0B81E50880D00710EDF /* CoreLibTests.swift */; };
 		632EE0BB1E50880D00710EDF /* CoreLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 632EE0AD1E50880D00710EDF /* CoreLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		632EE1501E50A98300710EDF /* CoreLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632EE14F1E50A98300710EDF /* CoreLib.swift */; };
-		632EE15C1E50AC3000710EDF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632EE15B1E50AC3000710EDF /* Alamofire.framework */; };
-		632EE15E1E50AC5500710EDF /* Alamofire.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 632EE15D1E50AC5500710EDF /* Alamofire.framework.dSYM */; };
 		632EE1881E50E88800710EDF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632EE1871E50E88800710EDF /* User.swift */; };
 		632EE18B1E50E99500710EDF /* AlamofireServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632EE18A1E50E99500710EDF /* AlamofireServices.swift */; };
+		639FA1981E52496B00BA1DC9 /* CoreLib.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 639FA1971E52496B00BA1DC9 /* CoreLib.framework.dSYM */; };
+		639FA1A81E5249FD00BA1DC9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639FA1A71E5249FD00BA1DC9 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +34,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				632EE15E1E50AC5500710EDF /* Alamofire.framework.dSYM in CopyFiles */,
+				639FA1981E52496B00BA1DC9 /* CoreLib.framework.dSYM in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,10 +48,10 @@
 		632EE0B81E50880D00710EDF /* CoreLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLibTests.swift; sourceTree = "<group>"; };
 		632EE0BA1E50880D00710EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		632EE14F1E50A98300710EDF /* CoreLib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreLib.swift; sourceTree = "<group>"; };
-		632EE15B1E50AC3000710EDF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		632EE15D1E50AC5500710EDF /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = "<group>"; };
 		632EE1871E50E88800710EDF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		632EE18A1E50E99500710EDF /* AlamofireServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireServices.swift; sourceTree = "<group>"; };
+		639FA1971E52496B00BA1DC9 /* CoreLib.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = CoreLib.framework.dSYM; path = "../parent-app/Carthage/Build/iOS/CoreLib.framework.dSYM"; sourceTree = "<group>"; };
+		639FA1A71E5249FD00BA1DC9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../parent-app/Carthage/Build/iOS/Alamofire.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				632EE15C1E50AC3000710EDF /* Alamofire.framework in Frameworks */,
+				639FA1A81E5249FD00BA1DC9 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +77,7 @@
 		632EE0A01E50880D00710EDF = {
 			isa = PBXGroup;
 			children = (
-				632EE15D1E50AC5500710EDF /* Alamofire.framework.dSYM */,
+				639FA1971E52496B00BA1DC9 /* CoreLib.framework.dSYM */,
 				632EE15A1E50AC0B00710EDF /* Frameworks */,
 				632EE0AC1E50880D00710EDF /* CoreLib */,
 				632EE0B71E50880D00710EDF /* CoreLibTests */,
@@ -126,7 +126,7 @@
 		632EE15A1E50AC0B00710EDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				632EE15B1E50AC3000710EDF /* Alamofire.framework */,
+				639FA1A71E5249FD00BA1DC9 /* Alamofire.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
