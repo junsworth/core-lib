@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User {
+public class User {
     
     // MARK properties
     var firstName: String
