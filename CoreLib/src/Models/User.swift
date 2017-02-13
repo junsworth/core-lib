@@ -10,7 +10,7 @@ import Foundation
 
 public class User {
     
-    // MARK properties
+    // MARK: properties
     var firstName: String
     var lastName: String
     var photo: UIImage?
