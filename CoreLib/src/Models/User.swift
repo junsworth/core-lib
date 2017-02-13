@@ -16,7 +16,7 @@ public class User {
     var photo: UIImage?
     
     // MARK: Initialization
-    init?(firstName: String, lastName: String, photo: UIImage?) {
+    public init?(firstName: String, lastName: String, photo: UIImage?) {
         
         // Initialization should fail if there is no name or if the rating is negative.
         if firstName.isEmpty || lastName.isEmpty  {
