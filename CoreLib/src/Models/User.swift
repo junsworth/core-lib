@@ -11,9 +11,9 @@ import Foundation
 public class User {
     
     // MARK: properties
-    var firstName: String
-    var lastName: String
-    var photo: UIImage?
+    internal var firstName: String
+    internal var lastName: String
+    internal var photo: UIImage?
     
     // MARK: Initialization
     public init?(firstName: String, lastName: String, photo: UIImage?) {
@@ -28,4 +28,18 @@ public class User {
         self.lastName = lastName
         self.photo = photo
     }
+    
+    // MARK: Getters
+    public func getFirstName() -> String {
+        return self.firstName;
+    }
+    
+    public func getLastName() -> String {
+        return self.lastName;
+    }
+    
+    public func getPhoto() -> UIImage {
+        return self.photo!;
+    }
+    
 }
