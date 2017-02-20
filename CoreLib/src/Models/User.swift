@@ -8,38 +8,156 @@
 
 import Foundation
 
-public class User {
+// MARK: Protocol
+protocol UserProtocol {
+    // MARK: Variables
+    var id: Int { get set }
+    var firstName: String { get set }
+    var lastName: String { get set }
+}
+
+// MARK: Model
+public struct User: UserProtocol {
     
-    // MARK: properties
-    internal var firstName: String
-    internal var lastName: String
-    internal var photo: UIImage?
+    // MARK: Variables to use
+    var id: Int
+    var firstName: String
+    var lastName: String
     
     // MARK: Initialization
-    public init?(firstName: String, lastName: String, photo: UIImage?) {
+    public init() {
+        self.id = 0;
+        self.firstName = String()
+        self.lastName = String()
+    }
+    
+    // MARK: Initialization
+    public init?(id: Int, firstName: String, lastName: String) {
         
         // Initialization should fail if there is no name or if the rating is negative.
-        if firstName.isEmpty || lastName.isEmpty  {
+        if id == 0 || firstName.isEmpty || lastName.isEmpty  {
             return nil
         }
         
         // Initialize stored properties.
+        self.id = id
         self.firstName = firstName
         self.lastName = lastName
-        self.photo = photo
     }
     
-    // MARK: Getters
-    public func getFirstName() -> String {
-        return self.firstName;
+}
+
+// MARK: Equatable extension
+extension User: Equatable {
+    public static func ==(lhs: User, rhs: User)-> Bool {
+        return lhs.id == rhs.id && lhs.firstName == rhs.firstName && lhs.lastName == rhs.lastName
+    }    
+}
+
+// MARK: JSON string to model extension
+extension User {
+    init?(json: [String: Any]) throws {
+        // Extract id
+        guard let idVal = json["id"] as? Int else {
+                throw SerializationError.missing("id")
+        }
+        
+        // Extract first name
+        guard let firstNameVal = json["firstName"] as? String else {
+            throw SerializationError.missing("firstName")
+        }
+        
+        // Extract last name
+        guard let lastNameVal = json["lastName"] as? String else {
+            throw SerializationError.missing("lastName")
+        }
+        
+        self.id = idVal
+        self.firstName = firstNameVal
+        self.lastName = lastNameVal
     }
-    
-    public func getLastName() -> String {
-        return self.lastName;
+}
+
+// MARK: JSON data to model extension
+extension User {
+    init?(data: Data, mock: String) throws {
+        
+        // Declare & Initialize Model
+        self = User.init()
+        
+        // Acquire bundle
+        if let url = Utils.getBundle(identifier: "bubbleworks.CoreLib").url(forResource: mock, withExtension: "json") {
+            do {
+                if let data: Data = try? Data(contentsOf: url) {
+                    if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                        
+                        // Extract id
+                        guard let idVal = json!["id"] as? Int else {
+                            throw SerializationError.missing("id")
+                        }
+                        
+                        // Extract first name
+                        guard let firstNameVal = json!["firstName"] as? String else {
+                            throw SerializationError.missing("firstName")
+                        }
+                        
+                        // Extract last name
+                        guard let lastNameVal = json!["lastName"] as? String else {
+                            throw SerializationError.missing("lastName")
+                        }
+                        
+                        // Set model mock values
+                        self.id = idVal
+                        self.firstName = firstNameVal
+                        self.lastName = lastNameVal
+                    }
+                }
+            } catch {
+                print("mock parse Error")
+            }
+        }
     }
-    
-    public func getPhoto() -> UIImage {
-        return self.photo!;
+}
+
+// MARK: JSON string to mock model extenstion method
+extension User {
+    public static func mock(data: Data, mock: String) -> User {
+        // Declare & Initialize Variables
+        var result: User = User.init()
+        // Acquire bundle
+        if let url = Utils.getBundle(identifier: "bubbleworks.CoreLib").url(forResource: mock, withExtension: "json") {
+            do {
+                if let data: Data = try? Data(contentsOf: url) {
+                    if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                        result = try User.init(json: json!)!
+                    }
+                }
+            } catch {
+                print("mock parse Error")
+            }
+        }
+        return result
     }
-    
+}
+
+
+// MARK: JSON string to mock model extenstion method
+extension User {
+    public static func mock(mock: String) -> User {
+        // Declare & Initialize Variables
+        var result: User = User.init()        
+        // Acquire bundle
+        if let url = Utils.getBundle(identifier: "bubbleworks.CoreLib").url(forResource: mock, withExtension: "json") {
+            do {
+                if let data: Data = try? Data(contentsOf: url) {
+                    if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                        result = try User.init(json: json!)!
+                    }
+                }
+            } catch {
+                print("mock parse Error")
+            }
+        }
+        return result
+    }
 }

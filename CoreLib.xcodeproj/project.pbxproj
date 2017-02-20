@@ -15,6 +15,11 @@
 		632EE18B1E50E99500710EDF /* AlamofireServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632EE18A1E50E99500710EDF /* AlamofireServices.swift */; };
 		639FA1A81E5249FD00BA1DC9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639FA1A71E5249FD00BA1DC9 /* Alamofire.framework */; };
 		639FA1BA1E531DF300BA1DC9 /* Alamofire.framework.dSYM in Copy Files dSYM Debug Symbols */ = {isa = PBXBuildFile; fileRef = 639FA1B91E531DF300BA1DC9 /* Alamofire.framework.dSYM */; };
+		63D5DCCE1E5A183500EFA823 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5DCCD1E5A183500EFA823 /* Device.swift */; };
+		63D5DCD11E5A312B00EFA823 /* SerializationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5DCD01E5A312B00EFA823 /* SerializationError.swift */; };
+		63D5DCD51E5A36FF00EFA823 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 63D5DCD41E5A36FF00EFA823 /* user.json */; };
+		63D5DCD91E5A3D8A00EFA823 /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5DCD81E5A3D8A00EFA823 /* MockUser.swift */; };
+		63D5DCDC1E5B19EF00EFA823 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5DCDB1E5B19EF00EFA823 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		632EE18A1E50E99500710EDF /* AlamofireServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireServices.swift; sourceTree = "<group>"; };
 		639FA1A71E5249FD00BA1DC9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../parent-app/Carthage/Build/iOS/Alamofire.framework"; sourceTree = "<group>"; };
 		639FA1B91E531DF300BA1DC9 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = "<group>"; };
+		63D5DCCD1E5A183500EFA823 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		63D5DCD01E5A312B00EFA823 /* SerializationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializationError.swift; sourceTree = "<group>"; };
+		63D5DCD41E5A36FF00EFA823 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
+		63D5DCD81E5A3D8A00EFA823 /* MockUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
+		63D5DCDB1E5B19EF00EFA823 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,7 @@
 		632EE0AC1E50880D00710EDF /* CoreLib */ = {
 			isa = PBXGroup;
 			children = (
+				63D5DCD21E5A36A100EFA823 /* resources */,
 				632EE14E1E50A8C500710EDF /* src */,
 				632EE0AD1E50880D00710EDF /* CoreLib.h */,
 				632EE0AE1E50880D00710EDF /* Info.plist */,
@@ -118,8 +129,11 @@
 		632EE14E1E50A8C500710EDF /* src */ = {
 			isa = PBXGroup;
 			children = (
-				632EE1891E50E97D00710EDF /* Services */,
+				63D5DCCF1E5A30F800EFA823 /* Errors */,
+				63D5DCD61E5A3D6600EFA823 /* Mocks */,
 				632EE1861E50E88800710EDF /* Models */,
+				632EE1891E50E97D00710EDF /* Services */,
+				63D5DCDA1E5B19B600EFA823 /* Utils */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -136,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				632EE1871E50E88800710EDF /* User.swift */,
+				63D5DCCD1E5A183500EFA823 /* Device.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,6 +161,54 @@
 				632EE18A1E50E99500710EDF /* AlamofireServices.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		63D5DCCF1E5A30F800EFA823 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				63D5DCD01E5A312B00EFA823 /* SerializationError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		63D5DCD21E5A36A100EFA823 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				63D5DCD31E5A36A100EFA823 /* Mocks */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		63D5DCD31E5A36A100EFA823 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				63D5DCD41E5A36FF00EFA823 /* user.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		63D5DCD61E5A3D6600EFA823 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				63D5DCD71E5A3D7700EFA823 /* Models */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		63D5DCD71E5A3D7700EFA823 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				63D5DCD81E5A3D8A00EFA823 /* MockUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		63D5DCDA1E5B19B600EFA823 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				63D5DCDB1E5B19EF00EFA823 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D5DCD51E5A36FF00EFA823 /* user.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,9 +342,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D5DCD11E5A312B00EFA823 /* SerializationError.swift in Sources */,
 				632EE18B1E50E99500710EDF /* AlamofireServices.swift in Sources */,
 				632EE1881E50E88800710EDF /* User.swift in Sources */,
+				63D5DCDC1E5B19EF00EFA823 /* Utils.swift in Sources */,
 				632EE1501E50A98300710EDF /* CoreLib.swift in Sources */,
+				63D5DCD91E5A3D8A00EFA823 /* MockUser.swift in Sources */,
+				63D5DCCE1E5A183500EFA823 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

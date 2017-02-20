@@ -15,7 +15,7 @@ public class AlamoreServices {
     
     public func getURLRequest(url:String) -> String {
         
-        var result:String = ""
+        var result:String = String()
         
         Alamofire.request("https://httpbin.org/get").responseJSON { response in
             print(response.request!)  // original URL request
