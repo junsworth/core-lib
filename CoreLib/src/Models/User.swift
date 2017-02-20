@@ -14,6 +14,9 @@ protocol UserProtocol {
     var id: Int { get set }
     var firstName: String { get set }
     var lastName: String { get set }
+    
+    // MARK: Methods
+    init()
 }
 
 // MARK: Model
@@ -75,89 +78,5 @@ extension User {
         self.id = idVal
         self.firstName = firstNameVal
         self.lastName = lastNameVal
-    }
-}
-
-// MARK: JSON data to model extension
-extension User {
-    init?(data: Data, mock: String) throws {
-        
-        // Declare & Initialize Model
-        self = User.init()
-        
-        // Acquire bundle
-        if let url = Utils.getBundle(identifier: "bubbleworks.CoreLib").url(forResource: mock, withExtension: "json") {
-            do {
-                if let data: Data = try? Data(contentsOf: url) {
-                    if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                        
-                        // Extract id
-                        guard let idVal = json!["id"] as? Int else {
-                            throw SerializationError.missing("id")
-                        }
-                        
-                        // Extract first name
-                        guard let firstNameVal = json!["firstName"] as? String else {
-                            throw SerializationError.missing("firstName")
-                        }
-                        
-                        // Extract last name
-                        guard let lastNameVal = json!["lastName"] as? String else {
-                            throw SerializationError.missing("lastName")
-                        }
-                        
-                        // Set model mock values
-                        self.id = idVal
-                        self.firstName = firstNameVal
-                        self.lastName = lastNameVal
-                    }
-                }
-            } catch {
-                print("mock parse Error")
-            }
-        }
-    }
-}
-
-// MARK: JSON string to mock model extenstion method
-extension User {
-    public static func mock(data: Data, mock: String) -> User {
-        // Declare & Initialize Variables
-        var result: User = User.init()
-        // Acquire bundle
-        if let url = Utils.getBundle(identifier: "bubbleworks.CoreLib").url(forResource: mock, withExtension: "json") {
-            do {
-                if let data: Data = try? Data(contentsOf: url) {
-                    if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                        result = try User.init(json: json!)!
-                    }
-                }
-            } catch {
-                print("mock parse Error")
-            }
-        }
-        return result
-    }
-}
-
-
-// MARK: JSON string to mock model extenstion method
-extension User {
-    public static func mock(mock: String) -> User {
-        // Declare & Initialize Variables
-        var result: User = User.init()        
-        // Acquire bundle
-        if let url = Utils.getBundle(identifier: "bubbleworks.CoreLib").url(forResource: mock, withExtension: "json") {
-            do {
-                if let data: Data = try? Data(contentsOf: url) {
-                    if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                        result = try User.init(json: json!)!
-                    }
-                }
-            } catch {
-                print("mock parse Error")
-            }
-        }
-        return result
     }
 }
