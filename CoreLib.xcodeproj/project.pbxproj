@@ -18,7 +18,6 @@
 		63D5DCCE1E5A183500EFA823 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5DCCD1E5A183500EFA823 /* Device.swift */; };
 		63D5DCD11E5A312B00EFA823 /* SerializationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5DCD01E5A312B00EFA823 /* SerializationError.swift */; };
 		63D5DCD51E5A36FF00EFA823 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 63D5DCD41E5A36FF00EFA823 /* user.json */; };
-		63D5DCD91E5A3D8A00EFA823 /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5DCD81E5A3D8A00EFA823 /* MockUser.swift */; };
 		63D5DCDC1E5B19EF00EFA823 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5DCDB1E5B19EF00EFA823 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +60,6 @@
 		63D5DCCD1E5A183500EFA823 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		63D5DCD01E5A312B00EFA823 /* SerializationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializationError.swift; sourceTree = "<group>"; };
 		63D5DCD41E5A36FF00EFA823 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
-		63D5DCD81E5A3D8A00EFA823 /* MockUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
 		63D5DCDB1E5B19EF00EFA823 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,7 +196,6 @@
 		63D5DCD71E5A3D7700EFA823 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				63D5DCD81E5A3D8A00EFA823 /* MockUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -347,7 +344,6 @@
 				632EE1881E50E88800710EDF /* User.swift in Sources */,
 				63D5DCDC1E5B19EF00EFA823 /* Utils.swift in Sources */,
 				632EE1501E50A98300710EDF /* CoreLib.swift in Sources */,
-				63D5DCD91E5A3D8A00EFA823 /* MockUser.swift in Sources */,
 				63D5DCCE1E5A183500EFA823 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
