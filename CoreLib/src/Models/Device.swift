@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: Protocol
-protocol DeviceProtocol {
+protocol DeviceProtocol: ModelProtocol {
     var id: String { get set }
     var name:String { get set }
     init()

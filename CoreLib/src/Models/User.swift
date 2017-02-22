@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: Protocol
-protocol UserProtocol {
+protocol UserProtocol: ModelProtocol {
     // MARK: Variables
     var id: Int { get set }
     var firstName: String { get set }
@@ -29,7 +29,7 @@ public struct User: UserProtocol {
     
     // MARK: Initialization
     public init() {
-        self.id = 0;
+        self.id = 0
         self.firstName = String()
         self.lastName = String()
     }
@@ -74,9 +74,28 @@ extension User {
         guard let lastNameVal = json["lastName"] as? String else {
             throw SerializationError.missing("lastName")
         }
-        
         self.id = idVal
         self.firstName = firstNameVal
         self.lastName = lastNameVal
+    }
+}
+
+// MARK: JSON user array to model array
+extension User {
+    static func users(json: [String: Any], key: String)-> [User]  {
+        // Declare & initialize array
+        var users: [User] = []
+        
+        // Loop array of users
+        for result in (json[key] as? [[String: Any]])! {
+            do {
+                if let user = try User.init(json: result) {
+                    users.append(user)
+                }
+            } catch {
+                
+            }
+        }
+        return users;
     }
 }
