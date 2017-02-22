@@ -36,30 +36,31 @@ class CoreLibTests: XCTestCase {
     // Confirm the User initializer works
     func testUserInitializersSucceed(){
         
-        // MARK: Measure routine
-        self.measure {
-            // Mock user
-            let mockUser = try! User.init(json: Utils.mock(mock: "user"))
-            
-            // Assert mock user exists
-            XCTAssertNotNil(mockUser)
-            
-            // Assert user's id > 0
-            XCTAssertTrue(mockUser!.id>0)
-            
-            // Assert user name
-            XCTAssertFalse(mockUser!.firstName.isEmpty)
-            
-            let namedUser = User.init(id: 1, firstName: "Jonathan", lastName: "Unsworth")
-            XCTAssertNotNil(namedUser)
-            
-            let unNamedUser = User.init(id:2, firstName: "", lastName: "Unsworth")
-            XCTAssertNil(unNamedUser)
-            
-            XCTAssertFalse(namedUser==unNamedUser)
-            
-            print("\(mockUser!.id) \(mockUser!.firstName) \(mockUser!.lastName)")
-        }
+        // Mock user
+        let mockUser = try! User.init(json: Utils.mock(mock: "user"))
+        
+        // Assert mock user exists
+        XCTAssertNotNil(mockUser)
+        
+        // Assert user's id > 0
+        XCTAssertTrue(mockUser!.id>0)
+        
+        // Assert user name
+        XCTAssertFalse(mockUser!.firstName.isEmpty)
+        
+        let namedUser = User.init(id: 1, firstName: "Jonathan", lastName: "Unsworth")
+        XCTAssertNotNil(namedUser)
+        
+        let unNamedUser = User.init(id:2, firstName: "", lastName: "Unsworth")
+        XCTAssertNil(unNamedUser)
+        
+        XCTAssertFalse(namedUser==unNamedUser)
+        
+        print("\(mockUser!.id) \(mockUser!.firstName) \(mockUser!.lastName)")
+        
+        let mockUsers: [User] = User.users(json: Utils.mock(mock: "users"), key: "users")
+        
+        XCTAssertTrue(mockUsers.count>0)
         
     }
     
