@@ -45,7 +45,7 @@ extension Utils {
 extension Utils {
     public static func mock(mock: String)-> [String: Any] {
         // Acquire bundle
-        if let url = Utils.getBundle(identifier: Bundles.coreLibBundleIdentifier).url(forResource: mock, withExtension: "json") {
+        if let url = Utils.getBundle(identifier: Keyword.bundleIdentifier).url(forResource: mock, withExtension: "json") {
             if let data: Data = try? Data(contentsOf: url) {
                 if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {                    
                     return (json)!

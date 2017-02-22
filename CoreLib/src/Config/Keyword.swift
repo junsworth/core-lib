@@ -21,6 +21,7 @@ protocol KeywordProtocol {
 }
 
 public struct Keyword: KeywordProtocol {
+    
     // MARK: Bundle identifier
     public static var bundleIdentifier: String = "bubbleworks.CoreLib"
     
@@ -30,4 +31,5 @@ public struct Keyword: KeywordProtocol {
     
     // MARK: Keys for file extensions
     public static var jsonFileExt: String = "json"
+    
 }

@@ -48,6 +48,18 @@ public struct User: UserProtocol {
         self.lastName = lastName
     }
     
+    public func getId()-> Int {
+        return self.id
+    }
+    
+    public func getFirstName()-> String {
+        return self.firstName
+    }
+    
+    public func getLastName()-> String {
+        return self.lastName
+    }
+    
 }
 
 // MARK: Equatable extension
