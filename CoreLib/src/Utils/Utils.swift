@@ -44,8 +44,11 @@ extension Utils {
 
 extension Utils {
     public static func mock(mock: String)-> [String: Any] {
+        
+        print("BUNDLE \(NSLocalizedString(Keyword.bundleIdentifier, comment: ""))")
+        
         // Acquire bundle
-        if let url = Utils.getBundle(identifier: Keyword.bundleIdentifier).url(forResource: mock, withExtension: "json") {
+        if let url = Utils.getBundle(identifier: NSLocalizedString(Keyword.bundleIdentifier, comment: "")).url(forResource: mock, withExtension: NSLocalizedString(Keyword.jsonFileExt, comment: "")) {
             if let data: Data = try? Data(contentsOf: url) {
                 if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {                    
                     return (json)!

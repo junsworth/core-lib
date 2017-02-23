@@ -23,7 +23,7 @@ protocol KeywordProtocol {
 public struct Keyword: KeywordProtocol {
     
     // MARK: Bundle identifier
-    public static var bundleIdentifier: String = "bubbleworks.CoreLib"
+    public static var bundleIdentifier: String = "identifier"
     
     // MARK: Keys for key/value pairs
     public static var user: String = "user"
