@@ -5,7 +5,7 @@
   Created by Jonathan Unsworth on 2017/02/23.
   Copyright © 2017 Jonathan Unsworth. All rights reserved.
 */
-"identifier"="bubbleworks.CoreLib";
+"identifier"="com.gk.lib.CoreLib";
 "user"="user";
 "users"="users";
 "json"="json";
