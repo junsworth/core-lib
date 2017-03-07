@@ -26,6 +26,18 @@
 		63D5DCE81E5C737E00EFA823 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 63D5DCE71E5C737E00EFA823 /* users.json */; };
 		63D5DCEF1E5CDD0B00EFA823 /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5DCEE1E5CDD0B00EFA823 /* Keyword.swift */; };
 		63D5DCFD1E5EB82200EFA823 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63D5DCFC1E5EB82200EFA823 /* Localizable.strings */; };
+		BF53EB461E6D4A9D00E31CBF /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF53EB451E6D4A9D00E31CBF /* SwiftyJSON.framework */; };
+		BF53EB471E6D6E8F00E31CBF /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF53EB451E6D4A9D00E31CBF /* SwiftyJSON.framework */; };
+		BF53EB4B1E6E8AAB00E31CBF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF53EB4A1E6E8AAB00E31CBF /* Quick.framework */; };
+		BF53EB4D1E6E8AAF00E31CBF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF53EB4C1E6E8AAF00E31CBF /* Nimble.framework */; };
+		BF53EB511E6E8DD500E31CBF /* device.json in Resources */ = {isa = PBXBuildFile; fileRef = BF53EB501E6E8DD500E31CBF /* device.json */; };
+		BF53EB531E6E907100E31CBF /* DeviceMockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53EB521E6E907100E31CBF /* DeviceMockAPI.swift */; };
+		BF6853201E680E8E0020271D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63D5DCFC1E5EB82200EFA823 /* Localizable.strings */; };
+		BF6853241E680F210020271D /* GKGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6853231E680F210020271D /* GKGradientView.swift */; };
+		BF6853251E682DF00020271D /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 63D5DCE71E5C737E00EFA823 /* users.json */; };
+		BF6853261E682DF00020271D /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 63D5DCD41E5A36FF00EFA823 /* user.json */; };
+		BF6853321E698F5F0020271D /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6853311E698F5F0020271D /* BaseRequest.swift */; };
+		BF6853341E698F700020271D /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6853331E698F700020271D /* BaseResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +60,15 @@
 				639FA1BA1E531DF300BA1DC9 /* Alamofire.framework.dSYM in Copy Files dSYM Debug Symbols */,
 			);
 			name = "Copy Files dSYM Debug Symbols";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF53EB491E6E822C00E31CBF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -75,6 +96,14 @@
 		63D5DCE71E5C737E00EFA823 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		63D5DCEE1E5CDD0B00EFA823 /* Keyword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
 		63D5DCFC1E5EB82200EFA823 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		BF53EB451E6D4A9D00E31CBF /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		BF53EB4A1E6E8AAB00E31CBF /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		BF53EB4C1E6E8AAF00E31CBF /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		BF53EB501E6E8DD500E31CBF /* device.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = device.json; sourceTree = "<group>"; };
+		BF53EB521E6E907100E31CBF /* DeviceMockAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceMockAPI.swift; sourceTree = "<group>"; };
+		BF6853231E680F210020271D /* GKGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKGradientView.swift; sourceTree = "<group>"; };
+		BF6853311E698F5F0020271D /* BaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		BF6853331E698F700020271D /* BaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +112,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				639FA1A81E5249FD00BA1DC9 /* Alamofire.framework in Frameworks */,
+				BF53EB461E6D4A9D00E31CBF /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +121,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				632EE0B41E50880D00710EDF /* CoreLib.framework in Frameworks */,
+				BF53EB471E6D6E8F00E31CBF /* SwiftyJSON.framework in Frameworks */,
+				BF53EB4B1E6E8AAB00E31CBF /* Quick.framework in Frameworks */,
+				BF53EB4D1E6E8AAF00E31CBF /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +180,7 @@
 				632EE1861E50E88800710EDF /* Models */,
 				632EE1891E50E97D00710EDF /* Services */,
 				63D5DCDA1E5B19B600EFA823 /* Utils */,
+				BF6853211E680F0D0020271D /* Widgets */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -154,6 +188,9 @@
 		632EE15A1E50AC0B00710EDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF53EB4C1E6E8AAF00E31CBF /* Nimble.framework */,
+				BF53EB4A1E6E8AAB00E31CBF /* Quick.framework */,
+				BF53EB451E6D4A9D00E31CBF /* SwiftyJSON.framework */,
 				639FA1A71E5249FD00BA1DC9 /* Alamofire.framework */,
 			);
 			name = Frameworks;
@@ -162,6 +199,8 @@
 		632EE1861E50E88800710EDF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BF68532F1E698F430020271D /* request */,
+				BF6853301E698F430020271D /* response */,
 				63D5DCE51E5C1D8E00EFA823 /* Model.swift */,
 				63D5DCCD1E5A183500EFA823 /* Device.swift */,
 				632EE1871E50E88800710EDF /* User.swift */,
@@ -198,6 +237,7 @@
 			children = (
 				63D5DCE71E5C737E00EFA823 /* users.json */,
 				63D5DCD41E5A36FF00EFA823 /* user.json */,
+				BF53EB501E6E8DD500E31CBF /* device.json */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -216,6 +256,7 @@
 				63D5DCE31E5C14F400EFA823 /* MockAPI.swift */,
 				63D5DCDF1E5C14A500EFA823 /* ModelAPI.swift */,
 				63D5DCDD1E5C142400EFA823 /* UserMockAPI.swift */,
+				BF53EB521E6E907100E31CBF /* DeviceMockAPI.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,6 +276,38 @@
 				63D5DCFC1E5EB82200EFA823 /* Localizable.strings */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		BF6853211E680F0D0020271D /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				BF6853221E680F0D0020271D /* views */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		BF6853221E680F0D0020271D /* views */ = {
+			isa = PBXGroup;
+			children = (
+				BF6853231E680F210020271D /* GKGradientView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		BF68532F1E698F430020271D /* request */ = {
+			isa = PBXGroup;
+			children = (
+				BF6853311E698F5F0020271D /* BaseRequest.swift */,
+			);
+			path = request;
+			sourceTree = "<group>";
+		};
+		BF6853301E698F430020271D /* response */ = {
+			isa = PBXGroup;
+			children = (
+				BF6853331E698F700020271D /* BaseResponse.swift */,
+			);
+			path = response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +351,8 @@
 				632EE0AF1E50880D00710EDF /* Sources */,
 				632EE0B01E50880D00710EDF /* Frameworks */,
 				632EE0B11E50880D00710EDF /* Resources */,
+				BF53EB481E6D6EC000E31CBF /* ShellScript */,
+				BF53EB491E6E822C00E31CBF /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -301,11 +376,13 @@
 				TargetAttributes = {
 					632EE0A91E50880D00710EDF = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = U7HFT6QF4H;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					632EE0B21E50880D00710EDF = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = U7HFT6QF4H;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -336,6 +413,7 @@
 				63D5DCE81E5C737E00EFA823 /* users.json in Resources */,
 				63D5DCFD1E5EB82200EFA823 /* Localizable.strings in Resources */,
 				63D5DCD51E5A36FF00EFA823 /* user.json in Resources */,
+				BF53EB511E6E8DD500E31CBF /* device.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +421,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6853251E682DF00020271D /* users.json in Resources */,
+				BF6853261E682DF00020271D /* user.json in Resources */,
+				BF6853201E680E8E0020271D /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +437,23 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		BF53EB481E6D6EC000E31CBF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
 			);
 			outputPaths = (
 			);
@@ -372,14 +470,18 @@
 			files = (
 				63D5DCEF1E5CDD0B00EFA823 /* Keyword.swift in Sources */,
 				63D5DCD11E5A312B00EFA823 /* SerializationError.swift in Sources */,
+				BF6853241E680F210020271D /* GKGradientView.swift in Sources */,
 				632EE18B1E50E99500710EDF /* AlamofireServices.swift in Sources */,
 				632EE1881E50E88800710EDF /* User.swift in Sources */,
 				63D5DCDC1E5B19EF00EFA823 /* Utils.swift in Sources */,
 				63D5DCE41E5C14F400EFA823 /* MockAPI.swift in Sources */,
+				BF53EB531E6E907100E31CBF /* DeviceMockAPI.swift in Sources */,
 				63D5DCE61E5C1D8E00EFA823 /* Model.swift in Sources */,
 				63D5DCE01E5C14A500EFA823 /* ModelAPI.swift in Sources */,
 				63D5DCDE1E5C142400EFA823 /* UserMockAPI.swift in Sources */,
 				632EE1501E50A98300710EDF /* CoreLib.swift in Sources */,
+				BF6853341E698F700020271D /* BaseResponse.swift in Sources */,
+				BF6853321E698F5F0020271D /* BaseRequest.swift in Sources */,
 				63D5DCCE1E5A183500EFA823 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,7 +609,9 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = U7HFT6QF4H;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -519,7 +623,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bubbleworks.CoreLib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gk.lib.CoreLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -533,6 +637,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = U7HFT6QF4H;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -544,7 +649,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bubbleworks.CoreLib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gk.lib.CoreLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -555,6 +660,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = U7HFT6QF4H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CoreLibTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bubbleworks.CoreLibTests;
@@ -567,6 +677,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = U7HFT6QF4H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CoreLibTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bubbleworks.CoreLibTests;
