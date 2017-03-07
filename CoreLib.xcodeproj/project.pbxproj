@@ -32,6 +32,8 @@
 		BF53EB4D1E6E8AAF00E31CBF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF53EB4C1E6E8AAF00E31CBF /* Nimble.framework */; };
 		BF53EB511E6E8DD500E31CBF /* device.json in Resources */ = {isa = PBXBuildFile; fileRef = BF53EB501E6E8DD500E31CBF /* device.json */; };
 		BF53EB531E6E907100E31CBF /* DeviceMockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53EB521E6E907100E31CBF /* DeviceMockAPI.swift */; };
+		BF53EB601E6EBD0D00E31CBF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF53EB4A1E6E8AAB00E31CBF /* Quick.framework */; };
+		BF53EB611E6EBD1500E31CBF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF53EB4C1E6E8AAF00E31CBF /* Nimble.framework */; };
 		BF6853201E680E8E0020271D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63D5DCFC1E5EB82200EFA823 /* Localizable.strings */; };
 		BF6853241E680F210020271D /* GKGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6853231E680F210020271D /* GKGradientView.swift */; };
 		BF6853251E682DF00020271D /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 63D5DCE71E5C737E00EFA823 /* users.json */; };
@@ -113,6 +115,8 @@
 			files = (
 				639FA1A81E5249FD00BA1DC9 /* Alamofire.framework in Frameworks */,
 				BF53EB461E6D4A9D00E31CBF /* SwiftyJSON.framework in Frameworks */,
+				BF53EB601E6EBD0D00E31CBF /* Quick.framework in Frameworks */,
+				BF53EB611E6EBD1500E31CBF /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
