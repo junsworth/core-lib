@@ -10,6 +10,22 @@ import Foundation
 
 // MARK: MockAPI for models
 protocol MockAPI {
-    static func inject(model: String)-> [String: Any]
+    func inject()-> ModelProtocol
+    func injectArray()-> [ModelProtocol]
+}
+
+extension MockAPI {
+    // MARK: Model inject methods
+    public static func inject(model: String)-> [String: Any] {
+        // Acquire bundle
+        if let url = Utils.getBundle(identifier: Keyword.coreLibBundleIdentifier).url(forResource: model, withExtension: Keyword.jsonFileExt) {
+            if let data: Data = try? Data(contentsOf: url) {
+                if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                    return json!
+                }
+            }
+        }
+        return [:]
+    }
 }
 
