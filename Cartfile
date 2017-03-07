@@ -1,2 +1,2 @@
 github "Alamofire/Alamofire" ~> 4.3
-#github "square/Cleanse" ~> 1.0.0
+github "SwiftyJSON/SwiftyJSON"
