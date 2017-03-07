@@ -9,8 +9,8 @@
 import Foundation
 
 protocol KeywordProtocol {
-    // MARK: Bundle identifier
-    static var bundleIdentifier: String { get }
+
+    static var coreLibBundleIdentifier: String { get }
     
     // MARK: Keys for key/value pairs
     static var user: String { get }
@@ -22,10 +22,10 @@ protocol KeywordProtocol {
 
 public struct Keyword: KeywordProtocol {
     
-    // MARK: Bundle identifier
-    public static var bundleIdentifier: String = "identifier"
+    // MARK: Bundle identifier for CoreLib
+    public static var coreLibBundleIdentifier: String = "com.gk.lib.CoreLib"
     
-    // MARK: Keys for key/value pairs
+    // MARK: Keys for model key/value pairs
     public static var user: String = "user"
     public static var users: String = "users"
     
@@ -33,3 +33,4 @@ public struct Keyword: KeywordProtocol {
     public static var jsonFileExt: String = "json"
     
 }
+
