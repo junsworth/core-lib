@@ -7,8 +7,15 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 // MARK: Model Protocol
 protocol ModelProtocol {
     
+    // Mark Initializers
+    init()
+    
+    // Creates model object from SwiftyJSON.JSON struct.
+    init(json:JSON) throws
+
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 // MARK: Protocol
 protocol UserProtocol: ModelProtocol {
@@ -15,8 +16,6 @@ protocol UserProtocol: ModelProtocol {
     var firstName: String { get set }
     var lastName: String { get set }
     
-    // MARK: Methods
-    init()
 }
 
 // MARK: Model
@@ -48,18 +47,6 @@ public struct User: UserProtocol {
         self.lastName = lastName
     }
     
-    public func getId()-> Int {
-        return self.id
-    }
-    
-    public func getFirstName()-> String {
-        return self.firstName
-    }
-    
-    public func getLastName()-> String {
-        return self.lastName
-    }
-    
 }
 
 // MARK: Equatable extension
@@ -69,7 +56,29 @@ extension User: Equatable {
     }    
 }
 
-// MARK: JSON string to model extension
+// MARK: JSON Initializer
+extension User {
+    init(json:JSON) {
+        self.init(id: json["id"].intValue, firstName: json["firstName"].stringValue, lastName: json["lastName"].stringValue)!
+    }
+}
+
+// MARK: JSON Initializer for an array
+extension User {
+    public static func users(json: JSON, key: String)-> [User] {
+        
+        var users: [User] = []
+        
+        for object in json[key].arrayValue {
+            let user = User.init(json: object)
+            users.append(user)
+        }
+        
+        return users;
+    }
+}
+
+// MARK: JSON string to model
 extension User {
     init?(json: [String: Any]) throws {
         // Extract id
@@ -86,9 +95,8 @@ extension User {
         guard let lastNameVal = json["lastName"] as? String else {
             throw SerializationError.missing("lastName")
         }
-        self.id = idVal
-        self.firstName = firstNameVal
-        self.lastName = lastNameVal
+        
+        self.init(id: idVal, firstName: firstNameVal, lastName: lastNameVal)
     }
 }
 

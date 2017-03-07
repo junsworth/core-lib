@@ -7,12 +7,12 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 // MARK: Protocol
 protocol DeviceProtocol: ModelProtocol {
     var id: String { get set }
     var name:String { get set }
-    init()
 }
 
 // MARK: Model
@@ -38,5 +38,24 @@ struct Device: DeviceProtocol {
         self.id = id
         self.name = name
     }
+    
+    public func getName()-> String {
+        return self.name
+    }
    
 }
+
+// MARK: JSON Initializer
+extension Device {
+    init(json:JSON) {
+        self.init(id: json["id"].stringValue, name: json["name"].stringValue)!
+    }
+}
+
+// MARK: Equatable extension
+extension Device: Equatable {
+    public static func ==(lhs: Device, rhs: Device)-> Bool {
+        return lhs.id == rhs.id && lhs.name == rhs.name
+    }
+}
+
