@@ -19,11 +19,11 @@ struct Utils: UtilsProtocol {
     }
 }
 
-// MARK: Method to retrieve data from bundle resource
+// MARK: Method to retrieve data from bundle resources
 extension Utils {
-    public static func dataForResource(bundleIdentifier: String, resource: String, resourceExtension: String)-> Data {
-        // Acquire bundle
-        if let url = Utils.getBundle(identifier: bundleIdentifier).url(forResource: resource, withExtension: resourceExtension) {
+    public static func dataForResource(bundleIdentifier: String, withGKResource: String, withGKExtension: String)-> Data {
+        // Acquire file url
+        if let url = Utils.getBundle(identifier: bundleIdentifier).url(forResource: withGKResource, withExtension: withGKExtension) {
             if let data: Data = try? Data(contentsOf: url) {
                 return data
             }
@@ -42,19 +42,11 @@ extension Utils {
     }
 }
 
+// MARK: Parse model data
 extension Utils {
-    public static func mock(mock: String)-> [String: Any] {
-        
-        print("BUNDLE \(NSLocalizedString(Keyword.bundleIdentifier, comment: ""))")
-        
-        // Acquire bundle
-        if let url = Utils.getBundle(identifier: NSLocalizedString(Keyword.bundleIdentifier, comment: "")).url(forResource: mock, withExtension: NSLocalizedString(Keyword.jsonFileExt, comment: "")) {
-            if let data: Data = try? Data(contentsOf: url) {
-                if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {                    
-                    return (json)!
-                }
-            }
-        }
-        return [:]
+    public static func inject(model: String, bundleIdentifier: String)-> [String: Any] {
+        // Parse json data
+        return Utils.jsonObject(data: Utils.dataForResource(bundleIdentifier: bundleIdentifier, withGKResource: model, withGKExtension: Keyword.jsonFileExt))
     }
 }
+
