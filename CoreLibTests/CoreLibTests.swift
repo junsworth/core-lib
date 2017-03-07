@@ -50,7 +50,7 @@ class CoreLibTests: XCTestCase {
             
             // Assert user id > 0
             XCTAssertTrue(user.id>0)
-            user.firstName = "Hello"
+            //user.firstName = "Hello"
             // Assert user first name
             XCTAssertFalse(user.firstName.isEmpty)
             

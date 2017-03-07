@@ -34,6 +34,9 @@
 		BF53EB531E6E907100E31CBF /* DeviceMockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53EB521E6E907100E31CBF /* DeviceMockAPI.swift */; };
 		BF53EB601E6EBD0D00E31CBF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF53EB4A1E6E8AAB00E31CBF /* Quick.framework */; };
 		BF53EB611E6EBD1500E31CBF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF53EB4C1E6E8AAF00E31CBF /* Nimble.framework */; };
+		BF53EB631E6EC18900E31CBF /* SwiftyJSON.framework.dSYM in Copy Files dSYM Debug Symbols */ = {isa = PBXBuildFile; fileRef = BF53EB621E6EC18900E31CBF /* SwiftyJSON.framework.dSYM */; };
+		BF53EB651E6EC19200E31CBF /* Quick.framework.dSYM in Copy Files dSYM Debug Symbols */ = {isa = PBXBuildFile; fileRef = BF53EB641E6EC19200E31CBF /* Quick.framework.dSYM */; };
+		BF53EB671E6EC19B00E31CBF /* Nimble.framework.dSYM in Copy Files dSYM Debug Symbols */ = {isa = PBXBuildFile; fileRef = BF53EB661E6EC19B00E31CBF /* Nimble.framework.dSYM */; };
 		BF6853201E680E8E0020271D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63D5DCFC1E5EB82200EFA823 /* Localizable.strings */; };
 		BF6853241E680F210020271D /* GKGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6853231E680F210020271D /* GKGradientView.swift */; };
 		BF6853251E682DF00020271D /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 63D5DCE71E5C737E00EFA823 /* users.json */; };
@@ -60,6 +63,9 @@
 			dstSubfolderSpec = 16;
 			files = (
 				639FA1BA1E531DF300BA1DC9 /* Alamofire.framework.dSYM in Copy Files dSYM Debug Symbols */,
+				BF53EB631E6EC18900E31CBF /* SwiftyJSON.framework.dSYM in Copy Files dSYM Debug Symbols */,
+				BF53EB651E6EC19200E31CBF /* Quick.framework.dSYM in Copy Files dSYM Debug Symbols */,
+				BF53EB671E6EC19B00E31CBF /* Nimble.framework.dSYM in Copy Files dSYM Debug Symbols */,
 			);
 			name = "Copy Files dSYM Debug Symbols";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +109,9 @@
 		BF53EB4C1E6E8AAF00E31CBF /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		BF53EB501E6E8DD500E31CBF /* device.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = device.json; sourceTree = "<group>"; };
 		BF53EB521E6E907100E31CBF /* DeviceMockAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceMockAPI.swift; sourceTree = "<group>"; };
+		BF53EB621E6EC18900E31CBF /* SwiftyJSON.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftyJSON.framework.dSYM; path = Carthage/Build/iOS/SwiftyJSON.framework.dSYM; sourceTree = "<group>"; };
+		BF53EB641E6EC19200E31CBF /* Quick.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Quick.framework.dSYM; path = Carthage/Build/iOS/Quick.framework.dSYM; sourceTree = "<group>"; };
+		BF53EB661E6EC19B00E31CBF /* Nimble.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Nimble.framework.dSYM; path = Carthage/Build/iOS/Nimble.framework.dSYM; sourceTree = "<group>"; };
 		BF6853231E680F210020271D /* GKGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKGradientView.swift; sourceTree = "<group>"; };
 		BF6853311E698F5F0020271D /* BaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		BF6853331E698F700020271D /* BaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
@@ -137,6 +146,9 @@
 		632EE0A01E50880D00710EDF = {
 			isa = PBXGroup;
 			children = (
+				BF53EB661E6EC19B00E31CBF /* Nimble.framework.dSYM */,
+				BF53EB641E6EC19200E31CBF /* Quick.framework.dSYM */,
+				BF53EB621E6EC18900E31CBF /* SwiftyJSON.framework.dSYM */,
 				639FA1B91E531DF300BA1DC9 /* Alamofire.framework.dSYM */,
 				632EE15A1E50AC0B00710EDF /* Frameworks */,
 				632EE0AC1E50880D00710EDF /* CoreLib */,
